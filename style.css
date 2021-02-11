@@ -1,0 +1,48 @@
+body {
+  background-color: #1b1b1b;
+  color: #f8f8f8;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+#bingo-container,
+.cardDiv {
+  background-color: #1b1b1b;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 30px;
+  border: 5px solid #f8f8f8;
+}
+
+.numberCells,
+.cardCells {
+  display: inline-block;
+  position: relative;
+  width: 8%;
+  border: 1px solid #f8f8f8;
+  text-align: center;
+}
+
+#heading {
+  text-align: center;
+}
+
+input {
+  text-align: center;
+  position: relative;
+  margin-bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.selected,
+.selected1 {
+  border: 1px solid #00ff84;
+  /* border-radius: 6px; */
+  background-color: #f8f8f8;
+  color: #1b1b1b;
+}

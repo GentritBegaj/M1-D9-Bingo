@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bingo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--
+        BINGO CHALLENGE!!!
+        Create programmatically (with JS) a BINGO board with 76 cells, from 1 to 76.
+        Create a button to randomize a number from 1 to 76. The same number should be highlighted on the bingo board
+
+        EXTRA: 
+        - Take ALWAYS a new number (avoid random 10 3 times for example)
+        - Create a USER BOARD with random 24 numbers that highlights as the main board does
+        - Let the user choose HOW MANY user boards he's willing to play with and create them.
+    -->
+    <h1 id="heading">Bingo Time</h1>
+
+    <input
+      type="button"
+      id="playButton"
+      value="Press here to play!"
+      onclick="bingoNumber()"
+    />
+
+    <div id="bingo-container"></div>
+
+    <input
+      type="button"
+      id="getNewCard"
+      value="Press here to get a new card"
+      onclick="createNewCard()"
+    />
+
+    <!-- <script>
+      for (let i = 0; i < 76; i++) {
+        let bingoTable = document.querySelector("#bingo-container");
+        const cell = document.createElement("div");
+        cell.className = "numberCells";
+        const bingoNumbers = document.createElement("h3");
+        bingoNumbers.innerText = i + 1;
+        cell.appendChild(bingoNumbers);
+        bingoTable.appendChild(cell);
+      }
+
+      const bingoNumber = function () {
+        let randomNumber = Math.floor(Math.random() * 76 + 1);
+        console.log(randomNumber);
+
+        let allNumbers = Array.from(document.querySelectorAll(".numberCells"));
+
+        let selected = document.querySelector(".selected");
+        if (selected) {
+          selected.classList.remove("selected");
+        }
+
+        allNumbers[randomNumber - 1].classList.add("selected");
+
+        let cardDiv = document.querySelector('.cardDiv')
+        console.log(cardDiv);
+      };
+
+      function createNewCard() {
+        let cardDiv = document.createElement("div");
+        cardDiv.className = "cardDiv";
+        for (let i = 0; i < 24; i++) {
+          let random = Math.floor(Math.random() * 76 + 1);
+          let cardCells = document.createElement("div");
+          cardCells.classList.add("cardCells");
+          let cardNumbers = document.createElement("h3");
+          cardNumbers.innerText = random;
+          cardCells.appendChild(cardNumbers);
+          cardDiv.appendChild(cardCells);
+        }
+        document.querySelector("body").appendChild(cardDiv);
+      }
+    </script> -->
+    <script src="index.js"></script>
+  </body>
+</html>
